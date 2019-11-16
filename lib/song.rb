@@ -22,10 +22,9 @@ class Song
   end
   
   def self.create(name)
-    self.new(name) 
-    save.songs
-    # binding.pry
-    @songs
+  song = Song.new(name)
+  song.save
+  song
   end
   
 end
