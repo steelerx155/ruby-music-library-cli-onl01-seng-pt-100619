@@ -1,11 +1,13 @@
 require 'pry'
 class Genre
   attr_accessor :name, :artist
+  
   @@all = []
   
   def initialize(name)
     @name = name 
     @artist = []
+    @songs = []
   end
   
   def self.all
@@ -26,4 +28,12 @@ class Genre
   genre
   end
   
+  def songs
+  @songs
+  end
+  
+  def artists
+    # binding.pry
+    songs.collect { |s| s.artist }.uniq
+  end
 end

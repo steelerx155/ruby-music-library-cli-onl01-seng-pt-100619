@@ -1,12 +1,13 @@
 require 'pry'
 class Artist
-  attr_accessor :name, :artist, :songs
+  attr_accessor :name, :songs, :genre
+  
   @@all = []
   
   def initialize(name)
     @name = name 
     @artist = []
-    @songs = []
+    @songs  = []
   end
   
   def self.all
@@ -32,6 +33,12 @@ class Artist
     songs << song unless songs.include?(song)
   end
  
-
+ 
+  def genres
+    songs.collect{ |s| s.genre }.uniq
+  end
+  
 end
+
+
 
