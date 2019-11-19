@@ -86,8 +86,8 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
      input = gets.chomp
       puts "Playing Larry Csonka by Action Bronson"
-      if input == nil
-        puts nil
+      until input == ""
+        puts ""
       end
 end
  end
